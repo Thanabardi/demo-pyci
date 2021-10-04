@@ -24,7 +24,3 @@ class StatsTest(TestCase):
         """Test a stdev medthod."""
         self.assertEqual(2.0, stdev([1000000, 1000004]))
 
-if __name__ == '__main__':
-    import unittest
-    unittest.main(verbosity=1)
-
