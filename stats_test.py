@@ -1,5 +1,5 @@
 from unittest import TestCase
-from stats import variance
+from stats import variance, stdev
 
 
 class StatsTest(TestCase):
@@ -19,6 +19,10 @@ class StatsTest(TestCase):
         """variance of an empty list should raise an exception"""
         with self.assertRaises(ValueError):
             var = variance([])
+
+    def test_stdev(self):
+        """Test a stdev medthod."""
+        self.assertEqual(2.0, stdev([1000000, 1000004]))
 
 if __name__ == '__main__':
     import unittest
